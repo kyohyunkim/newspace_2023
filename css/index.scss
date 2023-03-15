@@ -1,0 +1,140 @@
+main{
+    border-bottom: 2px solid #e2e2e2;
+    margin-bottom: 2px;
+    .main_wrap{
+        padding-top:30px;
+        display: flex;
+        justify-content: space-between;
+        .main_area{
+            width: 70%;
+            padding-right: 15px;
+            border-right: 1px solid #e2e2e2;
+            .title{
+                font-size: 28px;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+            .aboutme{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 30px; 
+                border-bottom: 1px solid #e2e2e2;
+                margin-bottom:30px;
+                .textbox{
+                    width: 40%;margin-right:15px;
+                    .sub_title{font-size: 18px;margin-bottom:10px;line-height: 24px;}
+                    .sub_title2{font-size: 15px;margin-bottom:10px;line-height: 24px;}
+                    .detail{
+                        color: #5a5a5a; font-size: 14px;padding-bottom:15px;
+                        border-bottom: 1px solid #e2e2e2;margin-bottom:20px;
+                    }
+                    .detail:nth-last-child(1){border:none;margin:0;padding:0;}
+                }
+                .imgbox{width:60%;background-color:unset;height:350px;}
+                .othersay{font-size: 15px; font-weight: 600; padding-bottom: 10px;}
+                &:nth-of-type(1) .imgbox{background-color: #e2e2e2;}
+            }
+        }
+        .sub{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #000;
+            padding-bottom: 30px;
+            margin-bottom:30px;
+            li{
+                width: 50%;
+                .stitle{font-size: 15px;text-align: left;padding-bottom:10px;line-height: 24px;}
+                .detail{font-size:13px;}
+                &:nth-of-type(1){padding-right: 20px;border-right: 1px solid #e2e2e2;}
+                &:nth-of-type(2){padding-left: 20px;}
+            }
+        }
+        .side_area{
+            width: 30%;
+            padding-left: 15px;
+        }
+    }
+
+    .pofol_area{
+        margin-top:30px;
+        border-top:1px solid #000;
+        padding-bottom: 50px;
+        height:100%;
+        &::before{content:"";display: block;width:100%;height: 1px;background-color: #000;margin-top: -5px;}
+
+        .title{padding: 25px 0 35px;font-weight: 600; font-size: 15px;}
+        .po_wrap{
+            display: grid;
+            grid-template-columns:repeat(4, 1fr); //4개씩 똑같은 크기 분배
+            grid-auto-rows: min-max(400px, auto); //400px 이상일 때 세로 크기 자동 변경 
+            grid-column-gap: 20px; //그리드 가로 간격
+            grid-row-gap: 30px; //그리드 세로 간격
+            width: 100%;
+            .brand_box{
+                .name{font-size:15px;font-weight: bold;padding-bottom: 10px;}
+                .img{background-color: #ddd;width: 100%;height:170px;margin-bottom:10px;background-repeat: no-repeat;background-size: cover;background-position: center;}
+                .text{font-size: 13px;margin-bottom: 15px;}
+                .btn{
+                    font-size:15px;
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    text-align: center;
+                    padding-bottom: 1px;
+                    width: 80px;height: 30px;
+                    line-height: 30px;
+                    transition: .5s;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    &:hover{background-color: #000; color: #fff; font-weight:300;}
+                }
+                //&:nth-of-type(1) .img{background-image: url(https://m.he-is.co.kr/web/product/medium/202301/9a3b40894405859bd068f242179ceaf8.png);}
+            }
+        }
+    }
+    
+}
+
+.side_area{
+    .side_1{
+        position: relative;
+        background: #e2e2e2;
+        width:120px;
+        height: 120px;
+    }
+}
+
+.swiper-wrapper{height:85%;}
+.swiper-pagination{bottom:0!important;z-index:-1;}
+.swiper-pagination-bullet{background:#000!important;}
+
+.swiper-button-next, .swiper-button-prev{width: 25px; height: 25px; border: 1px solid #000; border-radius: 50px;top:unset;bottom:0;}
+.swiper-button-prev{right: 45px;left:unset;}
+.swiper-button-next:after, .swiper-button-prev:after{font-size:12px!important; color:#000!important;}
+.swiper-button-next:after{padding-left: 2px;}
+.swiper-button-prev:after{padding-right: 2px;}
+
+
+
+
+
+@media all and (max-width:1024px) {
+    main{padding: 0 30px;}
+    main .main_wrap .main_area{
+        width: 100%;border:none;
+        padding: 0;
+    }
+    main .pofol_area .po_wrap{
+        grid-template-columns: repeat(1, 1fr);
+        li{padding: 0 0 30px 0;}
+    }
+    .side_area{display: none;}
+
+    main .main_wrap .main_area .aboutme{flex-direction: column-reverse;}
+    main .main_wrap .main_area .aboutme .textbox,
+    main .main_wrap .main_area .aboutme .imgbox{width: 100%;}
+    main .main_wrap .main_area .aboutme .textbox .sub_title{margin-top: 20px;}
+
+    main .main_wrap .main_area .aboutme .othersay{margin-top: 20px;}
+    .swiper-pagination{text-align: left; bottom:10px!important;}
+    .swiper-button-next, .swiper-button-prev{bottom: 10px!important;}
+}
