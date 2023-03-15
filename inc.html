@@ -14,7 +14,7 @@
                 <div class="head_inner">
                     <ul class="headfix_flex">
                         <ul class="flex_inner">
-                            <div class="fixed_logo chomsky">T</div>
+                            <div class="fixed_logo chomsky" onclick="window.scrollTo(0,0);">T</div>
                             <li class="cate"><a href="#about">About me</a></li>
                             <li class="cate"><a href="#project">Project</a></li>
                             <li class="cate"><a href="#otherwork">Other work</a></li>
@@ -123,7 +123,7 @@
                                     style="height:30px; resize: none;" placeholder="Your Message"></textarea>
                             </div>
                         </div>
-                        <script type="text/javascript">
+                        <script>
                             (function () {
                                 // get all data in form and return object
                                 function getFormData(form) {
@@ -232,8 +232,6 @@
                                     }
                                 }
                             })();
-
-                            
                         </script>
                         <div class="form-group m-0">
                             <button id="btnSubmit" class="btn-submit mt-2">Send Message</button>

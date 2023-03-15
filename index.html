@@ -58,7 +58,76 @@
         <div class="cursor__inner cursor__inner--dot"></div>
     </div>
     <div class="wrap" id="wrap">
-        <header id="about"><div></div></header>
+        <header id="about">
+            <div>
+                <div class="header_fixed">
+                    <div class="head_inner">
+                        <ul class="headfix_flex">
+                            <ul class="flex_inner">
+                                <div class="fixed_logo chomsky" onclick="window.scrollTo(0,0);">T</div>
+                                <li class="cate"><a href="#about">About me</a></li>
+                                <li class="cate"><a href="#project">Project</a></li>
+                                <li class="cate"><a href="#otherwork">Other work</a></li>
+                                <li class="cate"><a href="#othersay">Other say</a></li>
+                                <li class="cate"><a href="#contact">Contact</a></li>
+                            </ul>
+    
+                            <div class="flex_inner right">
+                                <div class="time">
+                                    <div id="current_date_fix"></div>
+                                    <span id="clock_fix">clock</span>
+                                    <span id="apm_fix">ampm</span>
+                                </div>
+                                <div class='weather'>
+                                    <div class='City'></div>
+                                    <div class="flex">
+                                        <div class='CurrTemp'></div>
+                                        <div class='CurrIcon'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="title" onclick="window.scrollTo(0,0);" data-hover>
+                    <a>
+                        <span class="red">T</span>he <span class="red">N</span>ew <span class="red">W</span>ork <span
+                            class="red">S</span>pace
+                    </a>
+                </div>
+                <div class="header_wrap">
+                    <div class="left_head">
+                        <div id="current_date"></div>
+                        <span id="clock">clock</span>
+                        <span id="apm">ampm</span>
+                    </div>
+                    <div class="right_head">
+                        <div class="onoff" data-hover>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class='weather'>
+                            <div class='City'></div>
+                            <div class="flex">
+                                <div class='CurrTemp'></div>
+                                <div class='CurrIcon'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header_cate">
+                    <ul>
+                        <li><a href="#about" data-hover2>About me</a></li>
+                        <li><a href="#project" data-hover2>Project</a></li>
+                        <li><a href="#otherwork" data-hover2>Other work</a></li>
+                        <li><a href="#othersay" data-hover2>Other say</a></li>
+                        <li><a href="#contact" data-hover2>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
 
         <main>
@@ -199,7 +268,188 @@
         </main>
 
 
-        <footer><div></div></footer>
+        <footer>
+            <div>
+                <div class="footer_wrap">
+                    <div class="title chomsky">
+                        <a>
+                            <span class="red">T</span>he <span class="red">N</span>ew <span class="red">W</span>ork <span
+                                class="red">S</span>pace
+                        </a>
+                    </div>
+                    <ul class="cate">
+                        <li><a href="#about" data-hover>ABOUT ME</a></li>
+                        <li><a href="#project" data-hover>PROJECT</a></li>
+                        <li><a href="#otherwork" data-hover>OTHER WORK</a></li>
+                        <li><a href="#othersay" data-hover>OTHER SAY</a></li>
+                        <li><a href="#contact" data-hover>CONTACT</a></li>
+                    </ul>
+                </div>
+    
+                <div class="foot_mes" id="contact">Contact</div>
+                <div class="foot_bottom">
+                    <div>
+                        <form
+            action="https://script.google.com/macros/s/AKfycbwjsC7SWlAx0O_h_-_YRHccU2YpkVE-9IKHcANbq83dPNBZVytoF-g3flS6DFHi564r/exec"
+            class="gform pure-form pure-form-stacked" method="POST" data-email="rlarygus33@gmail.com" target="_blank">
+                        <div class="form_wrap">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Name" name="Name" placeholder="Your Name"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="senderEmail" name="senderEmail"
+                                        placeholder="Your Email" required>
+                                </div>
+                            </div>
+    
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" name="message" rows="5" maxlength="200"
+                                        style="height:30px; resize: none;" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                            <script>
+                                (function () {
+                                    // get all data in form and return object
+                                    function getFormData(form) {
+                                        var elements = form.elements;
+                                        var honeypot;
+    
+                                        var fields = Object.keys(elements).filter(function (k) {
+                                            if (elements[k].name === "honeypot") {
+                                                honeypot = elements[k].value;
+                                                return false;
+                                            }
+                                            return true;
+                                        }).map(function (k) {
+                                            if (elements[k].name !== undefined) {
+                                                return elements[k].name;
+                                                // special case for Edge's html collection
+                                            } else if (elements[k].length > 0) {
+                                                return elements[k].item(0).name;
+                                            }
+                                        }).filter(function (item, pos, self) {
+                                            return self.indexOf(item) == pos && item;
+                                        });
+    
+                                        var formData = {};
+                                        fields.forEach(function (name) {
+                                            var element = elements[name];
+    
+                                            // singular form elements just have one value
+                                            formData[name] = element.value;
+    
+                                            // when our element has multiple items, get their values
+                                            if (element.length) {
+                                                var data = [];
+                                                for (var i = 0; i < element.length; i++) {
+                                                    var item = element.item(i);
+                                                    if (item.checked || item.selected) {
+                                                        data.push(item.value);
+                                                    }
+                                                }
+                                                formData[name] = data.join(', ');
+                                            }
+                                        });
+    
+                                        // add form-specific values into the data
+                                        formData.formDataNameOrder = JSON.stringify(fields);
+                                        formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+                                        formData.formGoogleSendEmail
+                                            = form.dataset.email || ""; // no email by default
+    
+                                        return { data: formData, honeypot: honeypot };
+                                    }
+    
+                                    function handleFormSubmit(event) {  // handles form submit without any jquery
+                                        event.preventDefault();           // we are submitting via xhr below
+                                        var form = event.target;
+                                        var formData = getFormData(form);
+                                        var data = formData.data;
+    
+                                        // If a honeypot field is filled, assume it was done so by a spam bot.
+                                        if (formData.honeypot) {
+                                            return false;
+                                        }
+    
+                                        disableAllButtons(form);
+                                        var url = form.action;
+                                        var xhr = new XMLHttpRequest();
+                                        xhr.open('POST', url);
+                                        // xhr.withCredentials = true;
+                                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                                        xhr.onreadystatechange = function () {
+                                            if (xhr.readyState === 4 && xhr.status === 200) {
+                                                form.reset();
+                                                var formElements = form.querySelector(".form-elements")
+                                                if (formElements) {
+                                                    formElements.style.display = "none"; // hide form
+                                                }
+                                                var thankYouMessage = form.querySelector(".thankyou_message");
+                                                var sendbtn = document.querySelector("#btnSubmit");
+                                                if (thankYouMessage) {
+                                                    thankYouMessage.style.display = "block";
+                                                    sendbtn.style.display = "none";
+                                                    alert("메일 전송에 성공했습니다. 확인 후 회신드리겠습니다.");
+                                                }
+                                            }
+                                        };
+                                        // url encode form data for sending as post data
+                                        var encoded = Object.keys(data).map(function (k) {
+                                            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                                        }).join('&');
+                                        xhr.send(encoded);
+                                    }
+    
+                                    function loaded() {
+                                        // bind to the submit event of our form
+                                        var forms = document.querySelectorAll("form.gform");
+                                        for (var i = 0; i < forms.length; i++) {
+                                            forms[i].addEventListener("submit", handleFormSubmit, false);
+                                        }
+                                    };
+                                    document.addEventListener("DOMContentLoaded", loaded, false);
+    
+                                    function disableAllButtons(form) {
+                                        var buttons = form.querySelectorAll("button");
+                                        for (var i = 0; i < buttons.length; i++) {
+                                            buttons[i].disabled = true;
+                                        }
+                                    }
+                                })();
+                            </script>
+                            <div class="form-group m-0">
+                                <button id="btnSubmit" class="btn-submit mt-2">Send Message</button>
+                                <div style="display:none" class="thankyou_message">
+                                    Thanks for contacting us!
+                                </div>
+                            </div>
+                        </div>
+                        
+                        </form>
+                    </div>
+    
+                    <ul class="last_bottom">
+                        <li>
+                            <div class="name">Address</div>
+                            <div class="detail">Daejo-dong, Eunpyeong-gu, Seoul</div>
+                        </li>
+                        <li>
+                            <div class="name">Email</div>
+                            <div class="detail">rlarygus33@naver.com</div>
+                        </li>
+                        <li>
+                            <div class="name">Social</div>
+                            <div class="detail"><img src="img/insta_logo_blk.svg"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
