@@ -283,8 +283,11 @@ footer{
                 font-size: 20px;
                 font-family: 'Assistant', 'Noto Sans KR',  sans-serif;
                 background: none;
-
+                border-radius:0!important;
             }
+            
+            textarea,
+            input:focus{outline:none;}
 
             .form-control#message{
                 width: 100%;
@@ -297,6 +300,7 @@ footer{
                 margin-right:20px;
                 font-family: 'Assistant', 'Noto Sans KR',  sans-serif;
                 white-space:nowrap; overflow:hidden; text-overflow:ellipsis; 
+                border-radius:0!important;
             }
 
             &.m-0{

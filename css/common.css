@@ -448,6 +448,12 @@ footer .foot_bottom .form-group input {
   font-size: 20px;
   font-family: 'Assistant', 'Noto Sans KR',  sans-serif;
   background: none;
+  border-radius: 0 !important;
+}
+
+footer .foot_bottom .form-group textarea,
+footer .foot_bottom .form-group input:focus {
+  outline: none;
 }
 
 footer .foot_bottom .form-group .form-control#message {
@@ -463,6 +469,7 @@ footer .foot_bottom .form-group .form-control#message {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-radius: 0 !important;
 }
 
 footer .foot_bottom .form-group.m-0 {
