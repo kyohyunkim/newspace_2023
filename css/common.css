@@ -76,6 +76,10 @@ input, textarea, button {
   -moz-caret-color: #000;
 }
 
+input:focus {
+  background: transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -829,6 +833,11 @@ footer .foot_bottom .last_bottom li:nth-last-child(1) .detail {
   }
   footer .foot_bottom .form-group input,
   footer .foot_bottom .form-group .form-control#message {
+    padding: 10px 0;
+    margin-top: 20px;
+    white-space: unset;
+  }
+  footer .foot_bottom .form-group.m-0 .thankyou_message {
     padding: 10px 0;
     margin-top: 20px;
     white-space: unset;
