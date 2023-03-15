@@ -568,7 +568,11 @@ mix-blend-mode:difference;
     footer .foot_bottom .form-row{width: calc(100% - 0px);}
     footer .foot_bottom .form-group #btnSubmit{margin-top: 20px;}
     footer .foot_bottom .form-group input,
-    footer .foot_bottom .form-group .form-control#message{padding: 10px 0;}
+    footer .foot_bottom .form-group .form-control#message{
+        padding: 10px 0;
+        margin-top: 20px;
+        white-space:unset;
+    }
 
     footer .footer_wrap .title{padding:20px 30px 0;border:none;}
     footer .footer_wrap .cate{display: none;}
