@@ -838,9 +838,11 @@ footer .foot_bottom .last_bottom li:nth-last-child(1) .detail {
     white-space: unset;
   }
   footer .foot_bottom .form-group.m-0 .thankyou_message {
-    padding: 10px 0;
-    margin-top: 20px;
-    white-space: unset;
+    padding: 0;
+    background: unset;
+    color: #000;
+    border: none;
+    margin: 10px 0 0 0;
   }
   footer .footer_wrap .title {
     padding: 20px 30px 0;
