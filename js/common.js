@@ -13,7 +13,17 @@ window.addEventListener('scroll',function(){
     }
 })
 
-
+const onoff = document.querySelector(".onoff");
+const onoffLi = document.querySelector(".onoff ul li");
+const red = document.querySelectorAll(".red");
+const Body = document.querySelector("body");
+onoff.addEventListener('click', () => {
+    onoffLi.classList.toggle('active');
+    Body.classList.toggle('active');
+    for (i = 0; i < red.length; i++) {
+        red[i].classList.toggle('active');
+    }
+});
 
 // 서울 날씨 
 $(document).ready(function () {
@@ -127,16 +137,7 @@ setInterval(clock2, 1000);
 
 
 
-const onoff = document.querySelector(".onoff");
-const onoffLi = document.querySelector(".onoff ul li");
-const red = document.querySelectorAll(".red");
-onoff.addEventListener('click', () => {
-    onoffLi.classList.toggle('active');
-    body.classList.toggle('active');
-    for (i = 0; i < red.length; i++) {
-        red[i].classList.toggle('active');
-    }
-});
+
 
 if (matchMedia("screen and (min-width: 1025px)").matches) {
     //cursor customer

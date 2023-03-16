@@ -12,6 +12,21 @@ window.onload = function(){
     });
 }
 
+const twobtn = document.querySelector(".two");
+const onebtn = document.querySelector(".one");
+const project_grid = document.querySelector(".pofol_area .po_wrap");
+const mo_view_type = document.querySelector(".mo_view_type");
+
+twobtn.addEventListener('click',function(){
+    project_grid.classList.remove('one_view');
+    mo_view_type.classList.remove('active');
+})
+
+onebtn.addEventListener('click',function(){
+    project_grid.classList.add('one_view');
+    mo_view_type.classList.add('active');
+})
+
 //eye 기능
 // var pc = window.matchMedia("screen and (min-width: 1025px)");
 // if (pc.matches) {
