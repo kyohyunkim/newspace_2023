@@ -30,9 +30,17 @@ main{
                     }
                     .detail:nth-last-child(1){border:none;margin:0;padding:0;}
                 }
-                .imgbox{width:60%;background-color:unset;height:350px;}
+                .imgbox{
+                    width:60%;background-color:unset;height:350px;
+                    
+                }
                 .othersay{font-size: 15px; font-weight: 600; padding-bottom: 10px;}
-                &:nth-of-type(1) .imgbox{background-color: #e2e2e2;}
+                &:nth-of-type(1) .imgbox{
+                    background-color: #e2e2e2;
+                    // background-image: url("/img/1756zx.jpg");
+                    // background-size: cover;
+                    // filter: blur(6px);
+                }
             }
         }
         .sub{
@@ -76,7 +84,7 @@ main{
             .brand_box{
                 .name{font-size:15px;font-weight: bold;padding-bottom: 10px;}
                 .img{background-color: #ddd;width: 100%;height:170px;margin-bottom:10px;background-repeat: no-repeat;background-size: cover;background-position: center;}
-                .text{font-size: 13px;margin-bottom: 15px;}
+                .text{font-size: 13px;margin-bottom: 15px;font-family: 'Noto Sans KR', sans-serif;}
                 .btn{
                     font-size:15px;
                     border: 1px solid #000;
@@ -88,7 +96,9 @@ main{
                     transition: .5s;
                     font-weight: 500;
                     text-transform: uppercase;
-                    &:hover{background-color: #000; color: #fff; font-weight:300;}
+                    a{color: #000;}
+                    &:hover{background-color: #000;}
+                    &:hover a{color: #fff;font-weight:300;}
                 }
                 //&:nth-of-type(1) .img{background-image: url(https://m.he-is.co.kr/web/product/medium/202301/9a3b40894405859bd068f242179ceaf8.png);}
             }

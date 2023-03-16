@@ -181,6 +181,7 @@ main .pofol_area .po_wrap .brand_box .img {
 main .pofol_area .po_wrap .brand_box .text {
   font-size: 13px;
   margin-bottom: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 main .pofol_area .po_wrap .brand_box .btn {
@@ -198,8 +199,15 @@ main .pofol_area .po_wrap .brand_box .btn {
   text-transform: uppercase;
 }
 
+main .pofol_area .po_wrap .brand_box .btn a {
+  color: #000;
+}
+
 main .pofol_area .po_wrap .brand_box .btn:hover {
   background-color: #000;
+}
+
+main .pofol_area .po_wrap .brand_box .btn:hover a {
   color: #fff;
   font-weight: 300;
 }

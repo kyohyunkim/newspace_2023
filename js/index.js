@@ -1,31 +1,78 @@
-window.onload = function(){
-    var swiper = new Swiper(".otherSaySwipoer", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        keyboard: true,
-    });
-}
+function letsGo(){
 
-const twobtn = document.querySelector(".two");
-const onebtn = document.querySelector(".one");
-const project_grid = document.querySelector(".pofol_area .po_wrap");
-const mo_view_type = document.querySelector(".mo_view_type");
+    fetch('data/data.json')
+    .then( res => res.json() )
+    .then( data => callback(data));
 
-twobtn.addEventListener('click',function(){
-    project_grid.classList.remove('one_view');
-    mo_view_type.classList.remove('active');
-})
+    function callback(data){
+        let link,img,work_environment,work_period,name,detail;
+        project_1='';
 
-onebtn.addEventListener('click',function(){
-    project_grid.classList.add('one_view');
-    mo_view_type.classList.add('active');
-})
+        for(let i=0; i<data.project.length; i++ ){
+            name = data.project[i].name;
+            //img= data.project[i].img;
+            work_environment = data.project[i].work_environment;
+            work_period = data.project[i].work_period;
+            link = data.project[i].link;
+
+            project_1 += `
+            <li class="brand_box">
+                <div class="name os">${name}</div>
+                <div class="img"></div>
+                <div class="text">
+                    <span>
+                    개발환경 : ${work_environment} <span style="color:#000">|</span> 
+                    작업기간 : ${work_period} <span style="color:#000">|</span> 
+                    기여도 : 100% <span style="color:#000">|</span> 
+                    사용언어 : html, css, js, jquery <span style="color:#000">|</span> 
+                    API : SwiperJs, cafe24배너매니저
+                    </span>
+                </div>
+                <div class="btn"><a href="${link}">view site</a></div>
+            </li>
+            `;
+        }
+        po_wrap.innerHTML = project_1;
+
+        //other say swiper js
+        var swiper = new Swiper(".otherSaySwipoer", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            keyboard: true,
+        });
+        //other say swiper js
+
+        //project view type
+        const twobtn = document.querySelector(".two");
+        const onebtn = document.querySelector(".one");
+        const project_grid = document.querySelector(".pofol_area .po_wrap");
+        const mo_view_type = document.querySelector(".mo_view_type");
+
+        twobtn.addEventListener('click',function(){
+            project_grid.classList.remove('one_view');
+            mo_view_type.classList.remove('active');
+        })
+
+        onebtn.addEventListener('click',function(){
+            project_grid.classList.add('one_view');
+            mo_view_type.classList.add('active');
+        })
+        //project view type
+
+
+
+    }
+};
+window.onload = letsGo;
+
+
+
 
 //eye 기능
 // var pc = window.matchMedia("screen and (min-width: 1025px)");
